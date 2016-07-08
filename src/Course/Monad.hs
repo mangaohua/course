@@ -161,7 +161,7 @@ infixl 1 >>=
   -> (a -> f b)
   -> a
   -> f c
-(<=<) f g a = g a >>= f 
+(<=<) f g a = g a >>= f
 
 infixr 1 <=<
 
