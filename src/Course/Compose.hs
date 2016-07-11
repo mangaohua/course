@@ -23,8 +23,7 @@ instance (Applicative f, Applicative g) =>
 -- Implement the pure function for an Applicative instance for Compose
   pure = Compose . pure.pure
 -- Implement the (<*>) function for an Applicative instance for Compose
-  (<*>) =
-    error "todo: Course.Compose (<*>)#instance (Compose f g)"
+  Compose f <*> Compose k = Compose (lift2 (<*>) f k) 
 
 instance (Monad f, Monad g) =>
   Monad (Compose f g) where
