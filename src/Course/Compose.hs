@@ -29,4 +29,4 @@ instance (Monad f, Monad g) =>
   Monad (Compose f g) where
 -- Implement the (=<<) function for a Monad instance for Compose
   (=<<) =
-    error "todo: Course.Compose (<<=)#instance (Compose f g)"
+    error "impossible"
